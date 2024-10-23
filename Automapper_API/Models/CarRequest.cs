@@ -2,7 +2,7 @@
 {
     public class CarRequest
     {
-        public string Brand { get; set; } = default!;
+        public string BrandName { get; set; } = default!;
         public int Power { get; set; }
     }
 }

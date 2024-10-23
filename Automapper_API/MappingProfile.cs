@@ -7,7 +7,9 @@ namespace Automapper_API
     {
         public MappingProfile()
         {
-            CreateMap<CarRequest, Car>();
+            //CreateMap<CarRequest, Car>();
+            CreateMap<CarRequest, Car>()
+                .ForMember(d => d.Brand, o => o.MapFrom(s => s.BrandName));
         }
     }
 }
