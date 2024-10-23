@@ -1,4 +1,5 @@
 using AutoMapper;
+using Automapper_API;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 //mapper
 var mapperConfig = new MapperConfiguration(m =>
 {
+    m.AddProfile(new MappingProfile());
 });
 
 IMapper mapper = mapperConfig.CreateMapper();
